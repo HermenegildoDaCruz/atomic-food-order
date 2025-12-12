@@ -24,9 +24,11 @@ export default function Header() {
             Order your favorite meals in just a few clicks. Fast delivery,
             trusted restaurants, and a smooth experience from start to finish.
           </p>
-          <button type="button" className="btn btn--primary">
-            Explore Foods
-          </button>
+          <a href="#meals">
+            <button type="button" className="btn btn--primary">
+              Explore Foods
+            </button>
+          </a>
         </div>
         <img src={heroImage} alt="Meals" className="hero-img" />
       </div>
