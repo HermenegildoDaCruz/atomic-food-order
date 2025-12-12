@@ -4,7 +4,7 @@ import { CartContext } from "../store/meal-cart-context";
 import { use } from "react";
 
 export default function Header() {
-  const { items } = use(CartContext);
+  const { items,showOrHideCartModal } = use(CartContext);
   return (
     <header className="header">
       <nav className="main-nav">
@@ -12,7 +12,7 @@ export default function Header() {
           <img src={logo} alt="App logo" />
           <span>AtomicFood.</span>
         </div>
-        <button type="button" className="cart-btn">
+        <button type="button" className="cart-btn" onClick={showOrHideCartModal}>
           <ion-icon name="cart" className="icon"></ion-icon>
           {items.length > 0 && <span className="">{items.length}</span>}
         </button>
