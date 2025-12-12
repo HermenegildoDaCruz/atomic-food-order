@@ -1,5 +1,5 @@
-import { CartContext } from "../store/meal-cart-context";
 import { motion } from "motion/react";
+import { CartContext } from "../store/meal-cart-context";
 import { use } from "react";
 export default function MealItem({ id, image, name, price, description }) {
   const { items, addOrRemoveItemToCart } = use(CartContext);

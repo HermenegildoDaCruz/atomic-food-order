@@ -2,9 +2,11 @@ import { useState } from "react";
 import { CartContext } from "./store/meal-cart-context";
 import Header from "./components/Header";
 import Meals from "./components/Meals";
+import Cart from "./components/Cart";
 function App() {
   const [mealCart, setMealCart] = useState({
     items: [],
+    show: false
   });
 
   function handleAddOrRemoveItem(mealId, mealName, mealPrice) {
@@ -69,6 +71,7 @@ function App() {
 
   return (
     <CartContext.Provider value={ctxValue}>
+      <Cart open = {mealCart.show}/>
       <Header />
       <Meals />
     </CartContext.Provider>
