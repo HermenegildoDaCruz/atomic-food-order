@@ -55,6 +55,4 @@ No real payments are processed, and all backend operations are simulated using a
 
 ## 🎥 Demo Video
 
-## 🎥 Demo Video
-
 https://www.webmobilefirst.com/pt-BR/screencasts/yyr-rkitc6i40j/
