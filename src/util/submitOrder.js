@@ -6,11 +6,5 @@ export async function submitOrder(data) {
       "content-type": "application/json",
     },
   });
-
-  if (!response.ok) {
-    console.log("Data not sended");
-    return 0;
-  }
-
-  console.log("DAta sended");
+  // return response.json();
 }
