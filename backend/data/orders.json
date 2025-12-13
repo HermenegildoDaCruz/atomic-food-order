@@ -1,1 +1,1 @@
-[]
+[{"items":[{"id":"m1","name":"Mac & Cheese","price":"8.99","qnt":1}],"customer":{"name":"Hopson de Almeida","email":"hopsondealmeida512@gmail.com","postal-code":"2344675","city":"Luanda"},"total":8.99,"id":"719.5040797762124"},{"items":[{"id":"m1","name":"Mac & Cheese","price":"8.99","qnt":1},{"id":"m2","name":"Margherita Pizza","price":"12.99","qnt":1}],"customer":{"name":"Hopson de Almeida","email":"hermenegildodacruz47@gmail.com","postal-code":"2344675","city":"Luanda"},"total":21.98,"id":"268.499065719684"}]

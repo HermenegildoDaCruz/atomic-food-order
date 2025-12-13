@@ -3,6 +3,7 @@ import { CartContext } from "./store/meal-cart-context";
 import Header from "./components/Header";
 import Meals from "./components/Meals";
 import Cart from "./components/Cart";
+import Checkout from "./components/Checkout";
 import Backdrop from "./components/Backdrop";
 
 function App() {
@@ -95,6 +96,7 @@ function App() {
     <CartContext.Provider value={ctxValue}>
       <Backdrop/>
       <Cart />
+      <Checkout/>
       <Header />
       <Meals />
     </CartContext.Provider>

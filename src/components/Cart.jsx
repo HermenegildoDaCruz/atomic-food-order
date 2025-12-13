@@ -38,7 +38,7 @@ export default function Cart() {
 
       <p className="cart-total">total: {totalAmount.toFixed(2)}$</p>
       <div className="cart-item-actions">
-        <button className="btn btn--primary">checkout</button>
+        <button className="btn btn--primary">go to checkout</button>
         <button className="btn" onClick={showOrHideCartModal}>
           close
         </button>
