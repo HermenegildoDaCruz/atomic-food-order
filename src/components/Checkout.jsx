@@ -5,7 +5,7 @@ import { isEmpty, isNotEmail } from "../util/validators";
 import { submitOrder } from "../util/submitOrder";
 
 export default function Checkout() {
-  const { items } = use(CartContext);
+  const { items, showCheckoutModal,closeCheckout,sucessfulCheckout} = use(CartContext);
 
   let totalAmount = 0;
   items.forEach((item) => {
@@ -24,7 +24,9 @@ export default function Checkout() {
       isEmpty(customer.city)
     ) {
       errors.push("Please fill all fields")
-      return {errors}
+      return {
+        errors
+      }
     }
 
     if (isNotEmail(customer.email)){
@@ -39,8 +41,9 @@ export default function Checkout() {
         total: totalAmount,
       }
     })
-    
 
+    // On successful order (responsable to render success message)
+    sucessfulCheckout(); 
     return { errors: null };
   }
 
@@ -49,10 +52,10 @@ export default function Checkout() {
   });
   
   return (
-    <dialog open={true} className="checkout-form modal">
+    <dialog open={showCheckoutModal} className="checkout-form modal">
       <h2>Checkout</h2>
       <span>
-        Total: <strong>{totalAmount}$</strong>
+        Total: <strong>{totalAmount.toFixed(2)}$</strong>
       </span>
       <form action={formAction}>
         <p className="control">
@@ -91,8 +94,8 @@ export default function Checkout() {
           <button type="submit" className="btn btn--primary">
             {pending ? "Sending...":"Checkout"}
           </button>
-          <button type="reset" className="btn">
-            reset
+          <button type="button" className="btn" onClick={closeCheckout}>
+            close
           </button>
         </div>
       </form>

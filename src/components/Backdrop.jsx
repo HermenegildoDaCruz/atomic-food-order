@@ -3,9 +3,11 @@ import { use } from "react";
 export default function Backdrop(){
     const {
     showCartModal,
+    showCheckoutModal,
+    showCheckoutMessage
   } = use(CartContext);
 
     return <>
-        {showCartModal && <div className="backdrop"></div> }
+        {(showCartModal || showCheckoutModal || showCheckoutMessage) && <div className="backdrop"></div> }
     </>
 }

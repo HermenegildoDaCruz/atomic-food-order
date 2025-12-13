@@ -8,6 +8,7 @@ export default function Cart() {
     decreaseMealQuantity,
     showCartModal,
     showOrHideCartModal,
+    goToCheckout
   } = use(CartContext);
 
   let totalAmount = 0;
@@ -36,9 +37,9 @@ export default function Cart() {
         )}
       </ul>
 
-      <p className="cart-total">total: {totalAmount.toFixed(2)}$</p>
+      {items.length > 0 && <p className="cart-total">total: {totalAmount.toFixed(2)}$</p>}
       <div className="cart-item-actions">
-        <button className="btn btn--primary">go to checkout</button>
+        <button className = {items.length === 0 ? "disable btn btn--primary":"btn btn--primary"} onClick={goToCheckout}>go to checkout</button>
         <button className="btn" onClick={showOrHideCartModal}>
           close
         </button>

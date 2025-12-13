@@ -270,6 +270,12 @@ a{
   animation: fade-slide-up 0.3s ease-out forwards;
   z-index: 100;
 }
+.modal.message{
+  font-size: 1.8rem;
+  top: 30%;
+  text-align: center;
+  border: 2px solid #66e26c;
+}
 .modal span{
   display: inline-block;
   margin: .6rem 0 .8rem 0;
@@ -306,6 +312,11 @@ a{
 
 .error p {
   margin: 0;
+}
+
+.disable{
+  opacity: .6;
+  cursor: not-allowed;
 }
 
 @keyframes fade-slide-up {
