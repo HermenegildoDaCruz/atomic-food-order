@@ -1,8 +1,9 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
+const storagedItems = JSON.parse(localStorage.getItem("meals-cart")) || [];
 export default function useShoppingHook() {
   const [mealCart, setMealCart] = useState({
-    items: [],
+    items: storagedItems,
     show: false,
   });
 
@@ -10,6 +11,10 @@ export default function useShoppingHook() {
     success: false,
     show: false,
   });
+
+  useEffect(() => {
+    localStorage.setItem("meals-cart", JSON.stringify(mealCart.items));
+  }, [mealCart]);
 
   function handleAddOrRemoveItem(mealId, mealName, mealPrice) {
     const itemAlreadyExists =

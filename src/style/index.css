@@ -271,10 +271,9 @@ a{
   z-index: 100;
 }
 .modal.message{
-  font-size: 1.8rem;
+  font-size: 1.6rem;
   top: 30%;
   text-align: center;
-  border: 2px solid #66e26c;
 }
 .modal span{
   display: inline-block;
